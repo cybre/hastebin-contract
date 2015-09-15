@@ -1,0 +1,7 @@
+[Contractor Entry]
+Name=Haste it!
+Icon=haste
+Description=Paste to Hastebin
+MimeType=text/plain
+Exec=python /usr/share/HastebinContract/hastebin.py %U
+Gettext-Domain=pantheon-files
