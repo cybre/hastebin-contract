@@ -23,7 +23,6 @@ class HastebinUploader:
 
         # Initialize the notification daemon
         Notify.init(appName)
-        self.notification = Notify.Notification.new("", "", "")
 
         # Parse arguments
         if len(args) == 1:
@@ -38,7 +37,7 @@ class HastebinUploader:
 
     def notify(self, messageOne, messageTwo, icon, timeout=5000):
         try:
-            self.notification.update(messageOne, messageTwo, icon)
+            self.notification = Notify.Notification.new(messageOne, messageTwo, icon)
             self.notification.set_timeout(timeout)
             self.notification.show()
         except:
